@@ -1,1 +1,253 @@
 
+2022-06-02 15:55:49,418 INFO: errors [in app.py:1049]
+2022-06-02 15:55:59,987 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 15:56:15,911 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:01:11,987 INFO: errors [in app.py:1049]
+2022-06-02 16:01:22,812 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:01:51,097 ERROR: Exception on /venues/33/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 705, in edit_venue
+    form = VenueForm(obj=Venue.query.get(venue_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:03:41,355 INFO: errors [in app.py:1049]
+2022-06-02 16:03:57,169 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:07:21,982 INFO: errors [in app.py:1049]
+2022-06-02 16:07:27,475 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:08:49,163 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
+2022-06-02 16:08:51,240 ERROR: Exception on /artists/18/edit [GET] [in /home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "app.py", line 558, in edit_artist
+    form = ArtistForm(obj=Artist.query.get(artist_id))
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 157, in __init__
+    super(Form, self).__init__(*args, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/form.py", line 87, in __init__
+    super(FlaskForm, self).__init__(formdata=formdata, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 286, in __init__
+    self.process(formdata, obj, data=data, **kwargs)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/form.py", line 127, in process
+    field.process(formdata, data, extra_filters=field_extra_filters)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/wtforms/csrf/core.py", line 44, in process
+    self.current_token = self.csrf_impl.generate_csrf_token(self)
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 139, in generate_csrf_token
+    return generate_csrf(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 33, in generate_csrf
+    secret_key = _get_config(
+  File "/home/nathy/Fyyur/FSND/projects/01_fyyur/starter_code/env/lib/python3.8/site-packages/flask_wtf/csrf.py", line 128, in _get_config
+    raise RuntimeError(message)
+RuntimeError: A secret key is required to use CSRF.
